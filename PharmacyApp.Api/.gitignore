@@ -1,0 +1,35 @@
+
+# .NET build output
+bin/
+obj/
+out/
+publish/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code local settings
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Local and sensitive configuration
+appsettings.*.local.json
+.env
+.env.*
+
+# Local development certificates
+*.pfx
+*.p12
+
+# Temporary files
+*.tmp
+*.bak
+

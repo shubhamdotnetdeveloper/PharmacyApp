@@ -1,0 +1,35 @@
+
+# macOS
+.DS_Store
+
+# .NET build artifacts
+**/bin/
+**/obj/
+**/publish/
+**/TestResults/
+
+# Angular / Node.js
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+
+# Environment and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+**/appsettings.*.local.json
+**/*.pfx
+**/*.p12
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE-specific files
+.vs/
+.idea/
+*.user
+*.suo

@@ -1,0 +1,14 @@
+{
+  "medicines": [
+    {
+      "id": "fdc3d4fc-7152-4494-a3a1-4c1d4ed61f44",
+      "fullName": "Med A",
+      "notes": "test Med A",
+      "expiryDate": "2026-10-12",
+      "quantity": 1900,
+      "price": 120,
+      "brand": "A Brand"
+    }
+  ],
+  "sales": []
+}

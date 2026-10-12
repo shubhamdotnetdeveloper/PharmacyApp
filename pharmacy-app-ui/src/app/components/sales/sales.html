@@ -1,0 +1,80 @@
+
+<div class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+      <small class="text-muted">Total Sales</small>
+      <h3>{{ sales.length }}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+      <small class="text-muted">Units Sold</small>
+      <h3>{{ totalUnitsSold }}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+      <small class="text-muted">Total Revenue</small>
+      <h3>{{ totalRevenue | currency:'INR' }}</h3>
+    </div>
+  </div>
+</div>
+
+@if (errorMessage) {
+  <div class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
+}
+
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="mb-0">Sales History</h5>
+
+      <button class="btn btn-outline-primary btn-sm"
+              (click)="loadSales()">
+        Refresh
+      </button>
+    </div>
+
+    @if (loading) {
+      <p class="text-muted">Loading sales...</p>
+    } @else {
+      <div class="table-responsive">
+        <table class="table table-striped align-middle">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Medicine</th>
+              <th>Quantity Sold</th>
+              <th>Unit Price</th>
+              <th>Total Amount</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            @for (sale of sales; track sale.id) {
+              <tr>
+                <td>{{ sale.soldAt | date:'medium' }}</td>
+                <td>{{ sale.medicineName }}</td>
+                <td>{{ sale.quantitySold }}</td>
+                <td>{{ sale.unitPrice | currency:'INR' }}</td>
+                <td class="fw-semibold">
+                  {{ sale.totalAmount | currency:'INR' }}
+                </td>
+              </tr>
+            } @empty {
+              <tr>
+                <td colspan="5" class="text-center text-muted py-4">
+                  No sales recorded yet.
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</div>

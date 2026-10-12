@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <span class="navbar-brand fw-semibold">
+      Pharmacy Management
+    </span>
+  </div>
+</nav>
+
+<main class="container py-4">
+
+  <div class="mb-4">
+    <h3 class="fw-bold">Pharmacy Dashboard</h3>
+    <p class="text-muted">
+      Manage inventory and track medicine sales.
+    </p>
+  </div>
+
+  <div class="d-flex gap-2 mb-4">
+    <button
+      class="btn"
+      [class.btn-primary]="activePage === 'medicines'"
+      [class.btn-outline-primary]="activePage !== 'medicines'"
+      (click)="navigate('medicines')">
+      Medicines
+    </button>
+
+    <button
+      class="btn"
+      [class.btn-primary]="activePage === 'sales'"
+      [class.btn-outline-primary]="activePage !== 'sales'"
+      (click)="navigate('sales')">
+      Sales History
+    </button>
+  </div>
+
+  @if (activePage === 'medicines') {
+    <app-medicine />
+  }
+
+  @if (activePage === 'sales') {
+    <app-sales />
+  }
+
+</main>

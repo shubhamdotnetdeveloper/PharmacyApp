@@ -1,0 +1,78 @@
+{
+  "medicines": [
+    {
+      "id": "fdc3d4fc-7152-4494-a3a1-4c1d4ed61f44",
+      "fullName": "Med A",
+      "notes": "test Med A",
+      "expiryDate": "2026-10-12",
+      "quantity": 1,
+      "price": 120,
+      "brand": "A Brand"
+    },
+    {
+      "id": "144629a0-a767-4c1b-be6f-5879b858b87e",
+      "fullName": "Medicine B",
+      "notes": "test medicine B",
+      "expiryDate": "2026-10-30",
+      "quantity": 55,
+      "price": 10,
+      "brand": "Brand B"
+    },
+    {
+      "id": "366fbc1a-3c00-4480-be3b-9d42ed029536",
+      "fullName": "Medicine AA",
+      "notes": "test med",
+      "expiryDate": "2029-01-01",
+      "quantity": 49,
+      "price": 80,
+      "brand": "Brand A"
+    }
+  ],
+  "sales": [
+    {
+      "id": "f54a5d1e-3e8d-48fa-b10b-5b5c914fc99f",
+      "medicineId": "fdc3d4fc-7152-4494-a3a1-4c1d4ed61f44",
+      "medicineName": "Med A",
+      "quantitySold": 1800,
+      "unitPrice": 120,
+      "totalAmount": 216000,
+      "soldAt": "2026-10-12T07:31:51.991104+00:00"
+    },
+    {
+      "id": "96a53414-b48d-43b5-9b1a-cda64aa484f2",
+      "medicineId": "fdc3d4fc-7152-4494-a3a1-4c1d4ed61f44",
+      "medicineName": "Med A",
+      "quantitySold": 10,
+      "unitPrice": 120,
+      "totalAmount": 1200,
+      "soldAt": "2026-10-12T07:32:13.172402+00:00"
+    },
+    {
+      "id": "5a974e07-dbca-4138-bbd5-bd06e5509b1d",
+      "medicineId": "fdc3d4fc-7152-4494-a3a1-4c1d4ed61f44",
+      "medicineName": "Med A",
+      "quantitySold": 89,
+      "unitPrice": 120,
+      "totalAmount": 10680,
+      "soldAt": "2026-10-12T07:32:25.36449+00:00"
+    },
+    {
+      "id": "6f16a3d2-b724-4fce-a567-3aa2528bdcb5",
+      "medicineId": "366fbc1a-3c00-4480-be3b-9d42ed029536",
+      "medicineName": "Medicine AA",
+      "quantitySold": 5,
+      "unitPrice": 80,
+      "totalAmount": 400,
+      "soldAt": "2026-10-12T08:00:17.070538+00:00"
+    },
+    {
+      "id": "7270992b-f545-4698-a092-9e30a941460e",
+      "medicineId": "366fbc1a-3c00-4480-be3b-9d42ed029536",
+      "medicineName": "Medicine AA",
+      "quantitySold": 6,
+      "unitPrice": 80,
+      "totalAmount": 480,
+      "soldAt": "2026-10-12T08:01:27.5861+00:00"
+    }
+  ]
+}
